@@ -14,25 +14,28 @@ document.querySelector('.js-converter-output').value=Number((document.querySelec
 )
 return rate}
 getRate();
-selectFrom = (id, check) => {
-    lastCur = document.querySelector('.from.selected').id;
-    if (document.getElementById(id).innerHTML == to && check === undefined){
-        selectTo(Number(lastCur)+4, 1);
+selectFrom = (cur, check) => {
+    cur = cur.replace(/[^a-zA-Z]+/g, '');
+    lastCur = document.querySelector('.from.selected').innerHTML;
+    if (cur == to && check === undefined){
+        selectTo(lastCur, 1);
     }
     document.querySelector('.from.selected').classList.remove("selected");
-    document.getElementById(id).classList.add("selected");
-    from = document.getElementById(id).innerHTML;
+    console.log(cur, `.from.${cur}`);
+    document.querySelector(`.from.${cur}`).classList.add("selected");
+    from = cur;
     getRate();
 
 }
-selectTo = (id, check) => {
-    lastCur = document.querySelector('.to.selected').id;
-    if (document.getElementById(id).innerHTML == from && check === undefined){
-        selectFrom(Number(lastCur)-4, 1);
+selectTo = (cur, check) => {
+    cur = cur.replace(/[^a-zA-Z]+/g, '');
+    lastCur = document.querySelector('.to.selected').innerHTML;
+    if (cur == from && check === undefined){
+        selectFrom(lastCur, 1);
     }
     document.querySelector('.to.selected').classList.remove("selected");
-    document.getElementById(id).classList.add("selected");
-    to = document.getElementById(id).innerHTML;
+    document.querySelector(`.to.${cur}`).classList.add("selected");
+    to=cur;
     getRate();
 
 }

@@ -31,30 +31,26 @@
         <div class="calc__title">У меня есть</div>
         <div class="calc__switcher js-converter-switcher" data-id="from">
           <div
-            class="calc__switcher__item from selected"
-            onclick="selectFrom(this.id)"
-            id="1"
+            class="calc__switcher__item from AZN selected"
+            onclick="selectFrom(this.innerHTML)"
           >
             AZN
           </div>
           <div
-            class="calc__switcher__item from"
-            onclick="selectFrom(this.id)"
-            id="2"
+            class="calc__switcher__item from USD"
+            onclick="selectFrom(this.innerHTML)"
           >
             USD
           </div>
           <div
-            class="calc__switcher__item from"
-            onclick="selectFrom(this.id)"
-            id="3"
+            class="calc__switcher__item from EUR"
+            onclick="selectFrom(this.innerHTML)"
           >
             EUR
           </div>
           <div
-            class="calc__switcher__item from"
-            onclick="selectFrom(this.id)"
-            id="4"
+            class="calc__switcher__item from GBP"
+            onclick="selectFrom(this.innerHTML)"
           >
             GBP
           </div>
@@ -64,9 +60,6 @@
             class="calc__input_box__input js-converter-input"
             type="number"
             value="5000"
-            min="0"
-            step="any"
-            oninput="validity.valid||(value='');"
           />
           <div class="calc__input_box__rate js-converter-rate-from">1</div>
         </div>
@@ -77,30 +70,26 @@
 
         <div class="calc__switcher js-converter-switcher" data-id="to">
           <div
-            class="calc__switcher__item to"
-            onclick="selectTo(this.id)"
-            id="5"
+            class="calc__switcher__item to AZN"
+            onclick="selectTo(this.innerHTML)"
           >
             AZN
           </div>
           <div
-            class="calc__switcher__item to selected"
-            onclick="selectTo(this.id)"
-            id="6"
+            class="calc__switcher__item to USD selected"
+            onclick="selectTo(this.innerHTML)"
           >
             USD
           </div>
           <div
-            class="calc__switcher__item to"
-            onclick="selectTo(this.id)"
-            id="7"
+            class="calc__switcher__item to EUR"
+            onclick="selectTo(this.innerHTML)"
           >
             EUR
           </div>
           <div
-            class="calc__switcher__item to"
-            onclick="selectTo(this.id)"
-            id="8"
+            class="calc__switcher__item to GBP"
+            onclick="selectTo(this.innerHTML)"
           >
             GBP
           </div>
@@ -111,9 +100,6 @@
             class="calc__input_box__input js-converter-output"
             type="number"
             value="50"
-            min="0"
-            step="any"
-            oninput="validity.valid||(value='');"
           />
           <div class="calc__input_box__rate js-converter-rate-to"></div>
         </div>
