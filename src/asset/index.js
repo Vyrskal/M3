@@ -21,11 +21,9 @@ selectFrom = (cur, check) => {
         selectTo(lastCur, 1);
     }
     document.querySelector('.from.selected').classList.remove("selected");
-    console.log(cur, `.from.${cur}`);
     document.querySelector(`.from.${cur}`).classList.add("selected");
     from = cur;
     getRate();
-
 }
 selectTo = (cur, check) => {
     cur = cur.replace(/[^a-zA-Z]+/g, '');
@@ -37,7 +35,6 @@ selectTo = (cur, check) => {
     document.querySelector(`.to.${cur}`).classList.add("selected");
     to=cur;
     getRate();
-
 }
 document.querySelector('.js-converter-input').addEventListener('input', () => {
     document.querySelector('.js-converter-output').value=Number((document.querySelector('.js-converter-input').value*rate).toFixed(3));
