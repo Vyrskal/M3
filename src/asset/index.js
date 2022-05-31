@@ -55,7 +55,7 @@ async function setLocale(newLocale) {
   translatePage();
 }
 async function fetchTranslationsFor(newLocale) {
-  const response = await fetch(`/src/asset/lang/${newLocale}.json`);
+  const response = await fetch(`https://raw.githubusercontent.com/Vyrskal/M3/main/src/asset/lang/${newLocale}.json`);
   return await response.json();
 }
 function translatePage() {
